@@ -220,7 +220,7 @@ restaurant.orderPizza('mushrooms', 'onion', 'olives', 'spinach');
 restaurant.orderPizza('mushrooms');
 */
 
-
+/*
 ///////////////////////////////////////
 // Short Circuiting (&& and ||)
 
@@ -252,7 +252,7 @@ if (restaurant.orderPizza) {
 }
 
 restaurant.orderPizza && restaurant.orderPizza('mushrooms', 'spinach');
-
+*/
 
 /*
 ///////////////////////////////////////
@@ -266,7 +266,7 @@ const guestCorrect = restaurant.numGuests ?? 10;
 console.log(guestCorrect);
 */
 
-/*
+
 ///////////////////////////////////////
 // Logical Assignment Operators
 const rest1 = {
@@ -298,4 +298,3 @@ rest2.owner &&= '<ANONYMOUS>';
 
 console.log(rest1);
 console.log(rest2);
-*/

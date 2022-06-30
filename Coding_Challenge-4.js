@@ -29,29 +29,31 @@ document.querySelector('button').addEventListener('click', function () {
 // Extra
 let input = prompt('type input here.');
 let output, iparr;
-if(input.includes(' ')){
+if (input.includes(' ')) {
     iparr = input.split(' ');
     output = handleSpace(...iparr);
-}else{
-    iparr =  input.split('_');
+} else {
+    iparr = input.split('_');
     output = handleUS(...iparr);
-} 
+}
 
 function transform(str) {
+    console.log(str);
     if (str[0].toUpperCase() === str[0]) {
-        for (let i=0; i<=str.length-1; i++) {
+        for (let i = 0; i <= str.length - 1; i++) {
             if (i % 2 !== 0) {
                 str = str.replace(str[i], str[i].toUpperCase());
             } else {
                 str = str.replace(str[i], str[i].toLowerCase());
             }
         }
-    } else {
-        for (let i=0; i<=str.length-1; i++) {
-            if (i % 2 === 0) {
-                str = str.replace(str[i], str[i].toUpperCase());
-            } else {
+    }
+    if (str[0].toUpperCase() !== str[0]) {
+        for (let i = 0; i <= str.length - 1; i++) {
+            if (i % 2 !== 0) {
                 str = str.replace(str[i], str[i].toLowerCase());
+            } else {
+                str = str.replace(str[i], str[i].toUpperCase());
             }
         }
     }
@@ -59,11 +61,11 @@ function transform(str) {
 }
 
 function handleUS(...iparr) {
-    for (let i=0; i<=iparr.length-1; i++) {
-        if(iparr[i].includes(' ')){
+    for (let i = 0; i <= iparr.length - 1; i++) {
+        if (iparr[i].includes(' ')) {
             iparr[i] = iparr[i].split(' ');
             iparr[i] = handleSpace(...iparr[i]);
-        }else {
+        } else {
             iparr[i] = transform(iparr[i]);
         }
     }
@@ -71,11 +73,11 @@ function handleUS(...iparr) {
 }
 
 function handleSpace(...iparr) {
-    for (let i=0; i<=iparr.length-1; i++) {
-        if(iparr[i].includes('_')){
+    for (let i = 0; i <= iparr.length - 1; i++) {
+        if (iparr[i].includes('_')) {
             iparr[i] = iparr[i].split('_');
             iparr[i] = handleUS(...iparr[i]);
-        }else {
+        } else {
             iparr[i] = transform(iparr[i]);
         }
     }

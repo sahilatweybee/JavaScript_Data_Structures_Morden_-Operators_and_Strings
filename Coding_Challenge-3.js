@@ -1,3 +1,5 @@
+'use strict';
+
 const gameEvents = new Map([
     [17, '⚽ GOAL'],
     [36, '🔁 Substitution'],

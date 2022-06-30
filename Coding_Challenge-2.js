@@ -1,4 +1,4 @@
-
+'use strict';
 
 const game = {
     team1: 'Bayern Munich',

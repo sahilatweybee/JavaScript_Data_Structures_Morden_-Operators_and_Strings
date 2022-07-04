@@ -8,12 +8,15 @@ document.querySelector('button').addEventListener('click', function () {
     let rows = text.split('\n');
 
     for (let [i, row] of rows.entries()) {
-        let [firstHalf, secondHalf] = row.toLowerCase().trim().split('_');
-
-        let output = `${firstHalf}${secondHalf.replace(
-            secondHalf[0],
-            secondHalf[0].toUpperCase()
-        )}`;
+        let output;
+        if (!row.includes('_')) { output = row.toLowerCase(); }
+        else {
+            let [firstHalf, secondHalf] = row.toLowerCase().trim().split('_');
+            output = `${firstHalf}${secondHalf.replace(
+                secondHalf[0],
+                secondHalf[0].toUpperCase()
+            )}`;
+        }
         console.log(`${output.padEnd(20)}${'✅'.repeat(i + 1)}`);
     }
 });

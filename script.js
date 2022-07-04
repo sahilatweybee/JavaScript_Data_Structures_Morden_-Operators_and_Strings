@@ -458,7 +458,7 @@ const question = new Map([
   [2, 'Java'],
   [3, 'JavaScript'],
   ['correct', 3],
-  [true, 'Correct 🎉'],
+  [true, 'Correct'],
   [false, 'Try again!'],
 ]);
 console.log(question);
@@ -647,10 +647,10 @@ planesInLine(5);
 planesInLine(3);
 planesInLine(12);
 */
-var str = 'sahil';
-for(let i in str){
-  if(i%2 !== 0){
-    str = str.replace(str.charAt(i), str[i].toLocaleUpperCase());
-  }
-}
-console.log(str);
+// var str = 'sahil';
+// for(let i in str){
+//   if(i%2 !== 0){
+//     str = str.replace(str.charAt(i), str[i].toLocaleUpperCase());
+//   }
+// }
+// console.log(str);

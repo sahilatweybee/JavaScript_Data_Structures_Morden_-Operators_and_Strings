@@ -28,6 +28,7 @@ document.querySelector('button').addEventListener('click', function () {
 
 // Extra
 let input = prompt('type input here.');
+// let input = "sahil parsaniya";
 let output, iparr;
 if (input.includes(' ')) {
     iparr = input.split(' ');
@@ -38,26 +39,26 @@ if (input.includes(' ')) {
 }
 
 function transform(str) {
-    console.log(str);
+    let tmp = [];
     if (str[0].toUpperCase() === str[0]) {
         for (let i = 0; i <= str.length - 1; i++) {
             if (i % 2 !== 0) {
-                str = str.replace(str[i], str[i].toUpperCase());
+                tmp.push(str[i].toUpperCase());
             } else {
-                str = str.replace(str[i], str[i].toLowerCase());
+                tmp.push(str[i].toLowerCase());
             }
         }
     }
     if (str[0].toUpperCase() !== str[0]) {
         for (let i = 0; i <= str.length - 1; i++) {
             if (i % 2 !== 0) {
-                str = str.replace(str[i], str[i].toLowerCase());
+                tmp.push(str[i].toLowerCase());
             } else {
-                str = str.replace(str[i], str[i].toUpperCase());
+                tmp.push(str[i].toUpperCase());
             }
         }
     }
-    return str;
+    return tmp.join('');
 }
 
 function handleUS(...iparr) {
